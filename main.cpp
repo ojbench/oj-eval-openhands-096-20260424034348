@@ -37,8 +37,13 @@ public:
             return 0;
         }
         
-        NodeInfo infoX = nodeMap[x];
-        NodeInfo infoY = nodeMap[y];
+        auto itX = nodeMap.find(x);
+        auto itY = nodeMap.find(y);
+        if (itX == nodeMap.end() || itY == nodeMap.end()) {
+            return 0;
+        }
+        NodeInfo infoX = itX->second;
+        NodeInfo infoY = itY->second;
         
         // Check if they are at the same depth and have different parents
         return (infoX.depth == infoY.depth && infoX.parent != infoY.parent) ? 1 : 0;
