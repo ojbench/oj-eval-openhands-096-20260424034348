@@ -23,7 +23,7 @@ public:
         }
         
         int val = input[index++];
-        nodeMap[val] = NodeInfo(depth, parent);
+        nodeMap.emplace(val, NodeInfo(depth, parent));
         
         // Recursively build left and right subtrees
         buildTree(input, nodeMap, index, depth + 1, val);
