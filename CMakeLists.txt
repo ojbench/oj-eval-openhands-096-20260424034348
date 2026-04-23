@@ -1,7 +1,7 @@
 
 
 cmake_minimum_required(VERSION 3.10)
-project(HelloWorld)
+project(BinaryTreeCousins)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -10,5 +10,5 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O2 -Wall -Wextra")
 
 # Add executable
-add_executable(code hello.cpp)
+add_executable(code main.cpp)
 
